@@ -4,9 +4,9 @@ if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   if (mkdir($name, 0755)) {
     $src = "./template/";
-    $dest = $name."/";
+    $dest = $name . "/";
     foreach (array_diff(scandir($src), array('..', '.')) as $file) {
-      copy($src.$file, $dest.$file);
+      copy($src . $file, $dest . $file);
     }
   }
 }
@@ -25,21 +25,19 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-  <form action="" method="post" style="display: grid; place-content: center; place-items: center;">
+  <!-- <form action="" method="post" style="display: grid; place-content: center; place-items: center;">
     <input type="text" name="name">
-    <input type="submit" name="submit" value="NOUVEAU +">
-  </form>
+    <input type="submit" name="submit" value="NOUVEAU">
+  </form> -->
   <?php
-  $sites = array_diff(scandir('./'), array('..', '.'));
+  $sites = array_diff(scandir('./'), array('..', '.', 'template', '.git', 'exo_style.css', 'style.css', 'index.php'));
   foreach ($sites as $site) {
-    if (!strpos($site, ".") && $site != "template" && $site != "old") {
-      echo '
-      <div style="display: grid; place-content: center; place-items: center;">
-        <h1>' . $site . '</h1>
-        <a href="./' . $site . '">Rejoindre</a>
-      </div>
-      ';
-    }
+    echo '
+    <div style="display: grid; place-content: center; place-items: center;">
+      <h1>' . $site . '</h1>
+      <a href="./' . $site . '">Rejoindre</a>
+    </div>
+    ';
   }
   ?>
 </body>

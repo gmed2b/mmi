@@ -4,9 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
+  background-color: #1a1e21;
   height: 100vh;
   padding: 200px;
   display: grid;
@@ -17,8 +19,7 @@ body {
   overflow: auto;
 }
 
-h1,
-a, input {
+h1, a, input {
   margin: 5px 0;
 }
 
@@ -29,4 +30,16 @@ a, input {
   padding: 10px;
   background-color: #3498db;
   border: none;
+}
+
+input[type="text"] {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 20px;
+  width: 200px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: black;
+  background-color: #fff;
 }
