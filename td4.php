@@ -149,6 +149,15 @@
       margin: 0 auto;
     }
 
+    fieldset {
+      padding: 15px 25px;
+      width: 450px;
+    }
+
+    legend {
+      padding: 0 10px;
+    }
+
     .form-control {
       display: flex;
       flex-direction: column;
@@ -190,14 +199,6 @@
 
     .form-control label {
       padding-bottom: 5px;
-    }
-
-    fieldset {
-      padding: 15px 25px;
-    }
-
-    legend {
-      padding: 0 10px;
     }
   </style>
 </body>
