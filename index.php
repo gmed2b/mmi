@@ -1,18 +1,3 @@
-<?php
-
-if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
-  if (mkdir($name, 0755)) {
-    $src = "./template/";
-    $dest = $name . "/";
-    foreach (array_diff(scandir($src), array('..', '.')) as $file) {
-      copy($src . $file, $dest . $file);
-    }
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +15,7 @@ if (isset($_POST['submit'])) {
     <input type="submit" name="submit" value="NOUVEAU">
   </form> -->
   <?php
-  $sites = array_diff(scandir('./'), array('..', '.', 'template', '.git', 'exo_style.css', 'style.css', 'index.php'));
+  $sites = array_diff(scandir('./'), array('..', '.', 'template', '.git', 'exo_style.css', 'style.css', 'index.php', 'create_dir.php'));
   foreach ($sites as $site) {
     echo '
     <div style="display: grid; place-content: center; place-items: center;">
