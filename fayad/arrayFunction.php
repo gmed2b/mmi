@@ -1,0 +1,1 @@
+<b>Client :</b> Dupont<br>prenom : Paul<br>ville : Paris<br>age : 27<br><br><b>Client :</b> Schmoll<br>prenom : Kirk<br>ville : Berlin<br>age : 35<br><br><b>Client :</b> Smith<br>prenom : Stan<br>ville : Londres<br>age : 45<br><br>
